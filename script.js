@@ -87,11 +87,21 @@ async function identifyImage() {
     uploadView.classList.add('hidden');
     loadingView.classList.remove('hidden');
 
-    const prompt = `Identify this image with a strong cultural focus on Assam (India) and Assamese culture.
-    Guidelines:
-    1. Actively look for Assamese cultural elements (Gamosa, Japi, Mekhela Sador, Xorai, Bihu, Tea gardens, Rhino, Brahmaputra).
-    2. Explain their cultural significance.
-    3. If generic, describe normally but maintain a regional tone if applicable.
+   // --- UPDATED PROMPT LOGIC ---
+    const prompt = `Analyze this image and determine if it is related to Assamese culture (Assam, India).
+
+    LOGIC FLOW:
+    1. CHECK: Does the image contain specific Assamese elements (e.g., Gamosa, Japi, Mekhela Sador, Xorai, Bihu dance, Assam Tea Gardens, One-horned Rhino, Brahmaputra)?
+    
+    2. IF YES (Assamese Elements Detected):
+       - Identify the object clearly.
+       - Explain its cultural significance in depth.
+    
+    3. IF NO (No Assamese Elements Detected):
+       - Describe the image normally and accurately.
+       - CRITICAL: Do NOT mention Assam, Assamese culture, or the fact that the image lacks these elements. Just describe what you see naturally.
+
+    OUTPUT FORMAT:
     Return a STRICT JSON object with keys "English", "Hindi", and "Assamese".
     Each key must contain: { "title": "Short Title", "body": "Detailed description" }
     Do not use markdown. Return only JSON string.`;
@@ -188,4 +198,5 @@ function showError(msg) {
     } else {
         errorDiv.classList.add('hidden');
     }
+
 }
