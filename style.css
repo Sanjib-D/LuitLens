@@ -1,0 +1,146 @@
+/* --- THEME DEFINITIONS --- */
+:root {
+    /* DEFAULT: Red River (Red/Orange) */
+    --bg-main: #fff1f2;
+    /* rose-50 */
+    --bg-card: #ffffff;
+    /* white */
+    --primary: #dc2626;
+    /* red-600 */
+    --primary-fg: #ffffff;
+    /* white text */
+    --secondary: #f97316;
+    /* orange-500 */
+    --accent: #fb923c;
+    /* orange-400 */
+    --border: #fecaca;
+    /* red-200 */
+    --text-main: #450a0a;
+    /* red-950 */
+    --text-sub: #7f1d1d;
+    /* red-900 */
+    --error-bg: #fef2f2;
+    --error-text: #dc2626;
+}
+
+[data-theme="neon"] {
+    /* NEW: Neon Glitch (Black/Neon Green) */
+    --bg-main: #000000;
+    /* pure black */
+    --bg-card: #111111;
+    /* dark gray */
+    --primary: #39ff14;
+    /* neon green */
+    --primary-fg: #000000;
+    /* black text on green */
+    --secondary: #00ff00;
+    /* lime */
+    --accent: #ccff00;
+    /* electric lime */
+    --border: #333333;
+    /* dim border */
+    --text-main: #eeeeee;
+    /* off-white */
+    --text-sub: #39ff14;
+    /* green text for subheaders */
+    --error-bg: #220000;
+    --error-text: #ff0000;
+}
+
+[data-theme="genz"] {
+    /* NEW: Gen Z Pop (Neo-Brutalism - Pink/Cyan/Black) */
+    --bg-main: #e0f2fe;
+    /* sky-100 */
+    --bg-card: #ffffff;
+    --primary: #ff00ff;
+    /* magenta */
+    --primary-fg: #ffffff;
+    --secondary: #00ffff;
+    /* cyan */
+    --accent: #ffff00;
+    /* yellow */
+    --border: #000000;
+    /* hard black border */
+    --text-main: #000000;
+    /* black */
+    --text-sub: #4b5563;
+    /* gray-600 */
+    --error-bg: #ffe4e6;
+    --error-text: #be123c;
+}
+
+[data-theme="classic"] {
+    /* Classic (Indigo/Slate) */
+    --bg-main: #f8fafc;
+    --bg-card: #ffffff;
+    --primary: #4f46e5;
+    --primary-fg: #ffffff;
+    --secondary: #64748b;
+    --accent: #818cf8;
+    --border: #e2e8f0;
+    --text-main: #0f172a;
+    --text-sub: #64748b;
+}
+
+[data-theme="dark"] {
+    /* Muga Night (Dark/Gold) */
+    --bg-main: #0f172a;
+    --bg-card: #1e293b;
+    --primary: #facc15;
+    --primary-fg: #0f172a;
+    --secondary: #94a3b8;
+    --accent: #fbbf24;
+    --border: #334155;
+    --text-main: #f8fafc;
+    --text-sub: #cbd5e1;
+    --error-bg: #450a0a;
+    --error-text: #fca5a5;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Dynamic Spinner */
+.spinner {
+    border: 4px solid var(--border);
+    border-top: 4px solid var(--primary);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Utility Classes */
+.btn-active {
+    background-color: var(--primary) !important;
+    color: var(--primary-fg) !important;
+    border-color: var(--primary) !important;
+}
