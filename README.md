@@ -4,7 +4,7 @@
 
 Featuring a dynamic **Theme Engine**, users can instantly switch between cultural, professional, and trendy visual styles.
 
-##  Live Demo - 
+##  Live Demo
 [Click Here to Launch LuitLens](https://sanjib-d.github.io/LuitLens/)
 
 ---
