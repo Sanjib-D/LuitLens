@@ -91,7 +91,7 @@ async function identifyImage() {
     const prompt = `Analyze this image and determine if it is related to Assamese culture (Assam, India).
 
     LOGIC FLOW:
-    1. CHECK: Does the image contain specific Assamese elements (e.g., Gamosa, Japi, Mekhela Sador, Xorai, Bihu dance, Assam Tea Gardens, One-horned Rhino, Brahmaputra)?
+    1. CHECK: Does the image contain specific Assamese elements (e.g.,Assamese people, Gamosa, Japi, Mekhela Sador, Xorai, Bihu dance, Assam Tea Gardens, One-horned Rhino, Brahmaputra)?
     
     2. IF YES (Assamese Elements Detected):
        - Identify the object clearly.
@@ -200,3 +200,4 @@ function showError(msg) {
     }
 
 }
+
